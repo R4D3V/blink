@@ -1,6 +1,6 @@
 "use client";
 
-import Link from 'next/link'
+import Link from "next/link";
 import { useState } from "react";
 import { useAuthStore } from "@/lib/store";
 import { generateId, createAvatarUrl } from "@/lib/utils";
@@ -49,7 +49,9 @@ export default function LoginScreen() {
         </p>
 
         <p className="mt-2 text-sm">
-          <Link href="/welcome" className="text-primary font-medium underline">Welcome Page</Link>
+          <Link href="/welcome" className="text-primary font-medium underline">
+            Welcome Page
+          </Link>
         </p>
 
         {/* Login Button */}

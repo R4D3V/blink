@@ -27,7 +27,7 @@ export default function Header({ isConnected, onToggleSidebar }: HeaderProps) {
           <h1 className="font-display text-2xl md:text-3xl font-black bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             BLINK
           </h1>
-        </Link> 
+        </Link>
 
         {/* Connection Status */}
         <div className="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-muted/50">

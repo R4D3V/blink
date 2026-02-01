@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Typewriter from '@/components/Typewriter'
+import Typewriter from "@/components/Typewriter";
 
 export const metadata = {
   title: "Welcome - Blink Chat",
