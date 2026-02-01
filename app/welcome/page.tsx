@@ -156,7 +156,8 @@ export default function WelcomePage() {
             <h3 className="text-lg font-semibold mb-2">Privacy First</h3>
             <p className="text-slate-300">
               We don't sell your data. Local demo mode keeps your info on your
-              device unless you connect an external backend.
+              device unless you connect an external backend. thats when it
+              works.
             </p>
           </div>
 
