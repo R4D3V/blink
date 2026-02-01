@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Orbitron, Work_Sans } from "next/font/google";
 import "./globals.css";
+import Toasts from "@/components/Toasts";
 
 const orbitron = Orbitron({
   subsets: ["latin"],

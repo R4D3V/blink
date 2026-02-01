@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { LogOut, Menu, Wifi, WifiOff } from "lucide-react";
+import { LogOut, Menu, Wifi, WifiOff, Settings } from "lucide-react";
 import { useAuthStore } from "@/lib/store";
 
 interface HeaderProps {
