@@ -1,109 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Work+Sans:wght@300;400;500;600;700&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
-  --font-orbitron: 'Orbitron', monospace;
-  --font-work-sans: 'Work Sans', sans-serif;
-  
-  --background: 0 0% 4%;
-  --foreground: 0 0% 98%;
-  
-  --card: 0 0% 8%;
-  --card-foreground: 0 0% 98%;
-  
-  --popover: 0 0% 8%;
-  --popover-foreground: 0 0% 98%;
-  
-  --primary: 345 100% 62%;
-  --primary-foreground: 0 0% 100%;
-  
-  --secondary: 188 100% 50%;
-  --secondary-foreground: 0 0% 100%;
-  
-  --muted: 0 0% 12%;
-  --muted-foreground: 0 0% 63%;
-  
-  --accent: 345 100% 62%;
-  --accent-foreground: 0 0% 100%;
-  
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 98%;
-  
-  --border: 0 0% 16%;
-  --input: 0 0% 16%;
-  --ring: 345 100% 62%;
-  
-  --radius: 0.75rem;
+  --bg: #08090b;
+  --surface: #121316;
+  --surface-2: #1a1c20;
+  --line: #232529;
+  --text: #f2f1ec;
+  --muted: #8b8d94;
+  --muted-2: #5c5e64;
+  --gold: #e8b34a;
+  --mint: #3fe0a5;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-muted-2: var(--muted-2);
+  --color-gold: var(--gold);
+  --color-mint: var(--mint);
+  --font-display: "Georgia", "Iowan Old Style", "Palatino Linotype", "URW Palladio L", serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", "JetBrains Mono", "Fira Code", ui-monospace, Menlo, Consolas, monospace;
 }
 
 * {
-  @apply border-border;
+  scrollbar-color: var(--line) var(--bg);
+}
+
+html {
+  background: var(--bg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
-  @apply bg-background text-foreground;
-  font-family: var(--font-work-sans);
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body), sans-serif;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+.font-display {
+  font-family: var(--font-display), serif;
 }
 
-::-webkit-scrollbar-track {
-  @apply bg-muted;
+.font-mono {
+  font-family: var(--font-mono), monospace;
 }
 
-::-webkit-scrollbar-thumb {
-  @apply bg-border rounded;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-primary;
-}
-
-/* Animations */
-@keyframes gradient {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
+@media (prefers-reduced-motion: no-preference) {
+  .marquee-track {
+    animation: marquee 38s linear infinite;
   }
 }
 
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient 15s ease infinite;
-}
-
-/* Message animations */
-.message-enter {
-  animation: slide-up 0.3s ease-out;
-}
-
-/* Typing indicator */
-@keyframes typing {
-  0%, 60%, 100% {
-    transform: translateY(0);
+@keyframes marquee {
+  from {
+    transform: translateX(0);
   }
-  30% {
-    transform: translateY(-10px);
+  to {
+    transform: translateX(-50%);
   }
 }
 
-.typing-dot {
-  animation: typing 1.4s infinite;
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
 }
 
-.typing-dot:nth-child(2) {
-  animation-delay: 0.2s;
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
 }
 
-.typing-dot:nth-child(3) {
-  animation-delay: 0.4s;
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--gold);
+  color: #08090b;
 }
