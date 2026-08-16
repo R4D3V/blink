@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import TokenomicsDonut from "@/components/TokenomicsDonut";
-import SolanaPriceChart from "@/components/SolanaPriceChart";
+import NasdogPriceChart from "@/components/NasdogPriceChart";
 
 const stats = [
   { label: "Chain", value: "Solana" },
@@ -127,7 +127,7 @@ export default function Home() {
                 Live market
               </p>
               <h2 className="mt-3 font-display text-3xl italic md:text-4xl">
-                Solana, in the moment.
+                $NASDOG, live on pump.fun.
               </h2>
             </div>
             <div className="flex items-center gap-2">
@@ -138,7 +138,7 @@ export default function Home() {
             </div>
           </div>
 
-          <SolanaPriceChart />
+          <NasdogPriceChart />
         </Reveal>
       </section>
 
