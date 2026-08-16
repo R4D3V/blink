@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import TokenomicsDonut from "@/components/TokenomicsDonut";
+import SolanaPriceChart from "@/components/SolanaPriceChart";
 
 const stats = [
   { label: "Chain", value: "Solana" },
@@ -114,6 +115,30 @@ export default function Home() {
               <p className="font-mono text-lg text-mint">Public track record</p>
             </div>
           </div>
+        </Reveal>
+      </section>
+
+      {/* Live price */}
+      <section className="border-t border-line">
+        <Reveal className="mx-auto max-w-6xl px-6 py-16">
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-mint">
+                Live market
+              </p>
+              <h2 className="mt-3 font-display text-3xl italic md:text-4xl">
+                Solana, in the moment.
+              </h2>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-mint" />
+              <span className="font-mono text-xs uppercase tracking-wider text-muted-2">
+                Live
+              </span>
+            </div>
+          </div>
+
+          <SolanaPriceChart />
         </Reveal>
       </section>
 
