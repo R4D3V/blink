@@ -69,7 +69,7 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap items-center gap-4" id="buy">
               <button className="rounded-full bg-gold px-6 py-3 text-sm font-semibold text-[#08090b] transition hover:opacity-90">
                 <a
-                  href="https://pump.fun/coin/5iuVbNLCvAxq2YrX1e37uHYSZCHa46GprT6bSyeUpump"
+                  href="https://pump.fun/coin/HCeLw23AT2q8zK9Gvo8rVEY1wtHRx6dNDyaBVv6tpump"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -79,7 +79,7 @@ export default function Home() {
               <button className="flex items-center gap-2 rounded-full border border-line px-6 py-3 text-sm font-mono text-muted transition hover:border-muted hover:text-text">
                 Copy CA
                 <span className="text-muted-2">
-                  5iuVbNLCvAxq2YrX1e37uHYSZCHa46GprT6bSyeUpump
+                  HCeLw23AT2q8zK9Gvo8rVEY1wtHRx6dNDyaBVv6tpump
                 </span>
               </button>
             </div>
