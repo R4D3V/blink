@@ -1,4 +1,5 @@
 import Reveal from "@/components/Reveal";
+import RoadmapGantt from "@/components/RoadmapGantt";
 
 const roadmap = [
   {
@@ -60,6 +61,10 @@ export default function Mission() {
         ourselves to.
       </p>
     </Reveal>
+
+      <Reveal className="mt-14 rounded-3xl border border-line bg-surface/40 p-6 md:p-10">
+        <RoadmapGantt />
+      </Reveal>
 
       <div className="mt-16 space-y-0 border-t border-line">
         {roadmap.map((r, i) => (

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import TokenomicsDonut from "@/components/TokenomicsDonut";
 
 const stats = [
   { label: "Chain", value: "Solana" },
@@ -91,17 +92,23 @@ export default function Home() {
             Where the supply actually goes.
           </h2>
 
-          <div className="mt-10 divide-y divide-line border-t border-line">
-            {tokenomics.map((t) => (
-              <div
-                key={t.label}
-                className="grid grid-cols-[1fr_auto] items-center gap-4 py-5 md:grid-cols-[2fr_1fr_2fr]"
-              >
-                <p className="text-sm font-medium text-text">{t.label}</p>
-                <p className="font-mono text-xl text-gold md:text-right">{t.pct}</p>
-                <p className="hidden text-sm text-muted md:block">{t.note}</p>
-              </div>
-            ))}
+          <div className="mt-10 grid items-center gap-10 md:grid-cols-[auto_1fr]">
+            <Reveal className="mx-auto md:mx-0">
+              <TokenomicsDonut />
+            </Reveal>
+
+            <div className="divide-y divide-line border-t border-line">
+              {tokenomics.map((t) => (
+                <div
+                  key={t.label}
+                  className="grid grid-cols-[1fr_auto] items-center gap-4 py-5 md:grid-cols-[2fr_1fr_2fr]"
+                >
+                  <p className="text-sm font-medium text-text">{t.label}</p>
+                  <p className="font-mono text-xl text-gold md:text-right">{t.pct}</p>
+                  <p className="hidden text-sm text-muted md:block">{t.note}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </Reveal>
       </section>

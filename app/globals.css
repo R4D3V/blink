@@ -84,6 +84,30 @@ body {
   transform: none;
 }
 
+.gantt-bar {
+  transform-origin: left center;
+  transform-box: fill-box;
+}
+
+.reveal.is-visible .gantt-bar {
+  animation: gantt-grow 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes gantt-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal.is-visible .gantt-bar {
+    animation: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
