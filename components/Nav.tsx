@@ -23,13 +23,6 @@ export default function Nav() {
             Mission
           </Link>
         </nav>
-
-        <Link
-          href="/buy"
-          className="rounded-full bg-gold px-5 py-2 text-sm font-semibold text-[#08090b] transition hover:opacity-90"
-        >
-          Buy $NASDOG
-        </Link>
       </div>
     </header>
   );
