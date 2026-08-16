@@ -11,16 +11,40 @@ const stats = [
 ];
 
 const tokenomics = [
-  { label: "Liquidity pool", pct: "60%", note: "Locked at launch, seeded on Raydium" },
-  { label: "Community & airdrops", pct: "20%", note: "Vested, released across roadmap phases" },
-  { label: "Marketing & CEX listings", pct: "12%", note: "Exchange fees, market makers, campaigns" },
+  {
+    label: "Liquidity pool",
+    pct: "60%",
+    note: "Locked at launch, seeded on Raydium",
+  },
+  {
+    label: "Community & airdrops",
+    pct: "20%",
+    note: "Vested, released across roadmap phases",
+  },
+  {
+    label: "Marketing & CEX listings",
+    pct: "12%",
+    note: "Exchange fees, market makers, campaigns",
+  },
   { label: "Team", pct: "8%", note: "12-month linear vest, no early unlock" },
 ];
 
 const roadmapPreview = [
-  { phase: "Phase 1", title: "Launch & lock", detail: "Fair launch on Solana, LP locked, contract renounced." },
-  { phase: "Phase 2", title: "Pack grows", detail: "CEX-1 listing push, holder milestones, first buybacks." },
-  { phase: "Phase 3", title: "Tier-1 listing", detail: "Major exchange application window, market maker onboarding." },
+  {
+    phase: "Phase 1",
+    title: "Launch & lock",
+    detail: "Fair launch on Solana, LP locked, contract renounced.",
+  },
+  {
+    phase: "Phase 2",
+    title: "Pack grows",
+    detail: "CEX-1 listing push, holder milestones, first buybacks.",
+  },
+  {
+    phase: "Phase 3",
+    title: "Tier-1 listing",
+    detail: "Major exchange application window, market maker onboarding.",
+  },
 ];
 
 export default function Home() {
@@ -37,24 +61,35 @@ export default function Home() {
               The dog that actually did the research.
             </h1>
             <p className="mt-6 max-w-md text-base leading-relaxed text-muted">
-              Before $NASDOG, there was eight years of public crypto research
-              — real portfolios, real drawdowns, posted in the open. This is
-              that desk, turned into a token the pack can actually hold.
+              Before $NASDOG, there was eight years of public crypto research —
+              real portfolios, real drawdowns, posted in the open. This is that
+              desk, turned into a token the pack can actually hold.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4" id="buy">
               <button className="rounded-full bg-gold px-6 py-3 text-sm font-semibold text-[#08090b] transition hover:opacity-90">
-                Buy on Raydium
+                <a
+                  href="https://pump.fun/coin/5iuVbNLCvAxq2YrX1e37uHYSZCHa46GprT6bSyeUpump"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Buy on Pump.fun
+                </a>
               </button>
               <button className="flex items-center gap-2 rounded-full border border-line px-6 py-3 text-sm font-mono text-muted transition hover:border-muted hover:text-text">
                 Copy CA
-                <span className="text-muted-2">· coming at launch</span>
+                <span className="text-muted-2">
+                  5iuVbNLCvAxq2YrX1e37uHYSZCHa46GprT6bSyeUpump
+                </span>
               </button>
             </div>
 
             <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
               {stats.map((s) => (
-                <div key={s.label} className="rounded-xl border border-line bg-surface px-4 py-3">
+                <div
+                  key={s.label}
+                  className="rounded-xl border border-line bg-surface px-4 py-3"
+                >
                   <p className="text-xs text-muted-2">{s.label}</p>
                   <p className="mt-1 font-mono text-sm text-text">{s.value}</p>
                 </div>
@@ -104,7 +139,9 @@ export default function Home() {
                   className="grid grid-cols-[1fr_auto] items-center gap-4 py-5 md:grid-cols-[2fr_1fr_2fr]"
                 >
                   <p className="text-sm font-medium text-text">{t.label}</p>
-                  <p className="font-mono text-xl text-gold md:text-right">{t.pct}</p>
+                  <p className="font-mono text-xl text-gold md:text-right">
+                    {t.pct}
+                  </p>
                   <p className="hidden text-sm text-muted md:block">{t.note}</p>
                 </div>
               ))}
