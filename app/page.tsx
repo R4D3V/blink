@@ -60,8 +60,13 @@ export default function Home() {
   return (
     <main>
       {/* Hero */}
-      <section className="mx-auto max-w-6xl px-6 pt-16 pb-20 md:pt-24">
-        <Reveal className="grid items-center gap-12 md:grid-cols-[1.1fr_0.9fr]">
+      <section className="relative overflow-hidden">
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-[url('/holders-bg.svg')] bg-cover bg-center opacity-[0.15]"
+        />
+        <div className="relative mx-auto max-w-6xl px-6 pt-16 pb-20 md:pt-24">
+          <Reveal className="grid items-center gap-12 md:grid-cols-[1.1fr_0.9fr]">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-mint">
               Live on Solana
@@ -121,9 +126,10 @@ export default function Home() {
             <div className="absolute -bottom-4 -left-4 rounded-2xl border border-line bg-surface px-4 py-3 shadow-xl">
               <p className="text-xs text-muted-2">Since inception</p>
               <p className="font-mono text-lg text-mint">Public track record</p>
+              </div>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
       </section>
 
       {/* Live price */}

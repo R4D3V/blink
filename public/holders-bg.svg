@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900" role="img" aria-label="only HOLDERS make it to the top">
+  <defs>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.3" stop-color="#e8b34a" stop-opacity="0" />
+      <stop offset="0.65" stop-color="#e8b34a" stop-opacity="0.8" />
+      <stop offset="1" stop-color="#e8b34a" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+  <g font-family="Georgia, 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', serif" font-style="italic">
+    <text x="740" y="430" font-size="70" fill="url(#fade)">only HOLDERS</text>
+    <text x="740" y="515" font-size="70" fill="url(#fade)">make it to the top</text>
+    <text x="740" y="610" font-size="24" font-family="'SF Mono', 'JetBrains Mono', 'Fira Code', ui-monospace, monospace" font-style="normal" letter-spacing="4" fill="url(#fade)">SOLANA · PUMP.FUN · NO ADMIN KEYS</text>
+  </g>
+</svg>
